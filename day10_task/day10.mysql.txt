@@ -1,0 +1,23 @@
+create database db;
+use db;
+create table students(
+rollno int,
+name varchar(100),
+department varchar(100),
+grade varchar(5)
+);
+select *from students;
+select name,rollno,department from students;
+insert into students(rollno,name,department,grade)values
+(1,"pri","cs","a"),
+(2,"sp","ecs","a"),
+(3,"sri","ecs","b"),
+(4,"ps","IT","b"),
+(5,"psp","CT","a");
+update students set name="sripri" where rollno=2;
+alter table students add phoneno varchar(100); 
+update students set phoneno="123456677" where rollno=1;
+update students set phoneno="1234566675" where rollno=2;
+alter table students drop phoneno;
+truncate table students;
+drop table students;
